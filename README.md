@@ -30,5 +30,3 @@ Make sure the Drive directory structure matches the `CONFIG['data_base']` path i
 
 ---
 
-## 🛠️ Project Structure
-
