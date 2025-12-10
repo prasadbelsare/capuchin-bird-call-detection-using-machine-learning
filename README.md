@@ -30,3 +30,21 @@ Make sure the Drive directory structure matches the `CONFIG['data_base']` path i
 
 ---
 
+
+---
+
+## 🚀 How the System Works
+
+1. Audio is loaded at **16 kHz** and standardized to **3-second clips**.  
+2. Spectrograms are generated using STFT (frame length 320, hop 32).  
+3. Three models are trained and compared:
+   - CNN  
+   - CNN + LSTM  
+   - CNN + GRU  
+4. Metrics such as accuracy, precision, recall, F1, and AUC are computed.  
+5. The best model is selected based on **highest AUC**.  
+6. Full forest recordings are processed using a **sliding-window detector**.  
+7. Predictions are thresholded and grouped to estimate the **number of Capuchinbird calls**.
+
+---
+
